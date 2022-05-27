@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title WeatherMan App
+        link(rel="stylesheet", href="style.css")
+    body 
+    h1 WeatherMan App 
+    p Enter a city to check the current weather conditions.
+    form(action = '/', method = 'POST')
+        div 
+            label(for="city") Enter City: 
+            input(name="city" value = "City")
+        br
+        button(type="submit") Submit Location
+
+    script(src="index.js") 
+//-----------------------
+    //once the information is submitted, I want the request to return:
+
+        div(id="image")
+        //- image that weatherapi generates for the specific city will appear here  -under current,condition, icon subkey in apigenerator
+        div(id="location")
+        //- city and state information will appear here - under locatio,, name, region
+        div(id="condition")
+        //- weather conditions will appear here - under condition,text
+
+
+    script(src="script.js")
+    h1 Local Weather 
