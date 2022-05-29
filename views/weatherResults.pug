@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Weather Results
+        link(rel="stylesheet", href="style.css")
+    body 
+        h1 WeatherMan App 
+        h3 Today's weather for #{city}, #{state}:
+        img(src="", alt="")
+        #condition 
+        h3 Weather Conditions: #{condition}
+        #temperature_c 
+        h3 Current temperature: #{temperature}(F), #{temperature_c}(C)
+        #humidity 
+        h3 Humidity: #{humidity}
+        form(action='/') 
+         button(type="submit") Search Again?
+        script(src="index.js")
+    //- city above is connected to submitted city from weather main page - how to connect to api 

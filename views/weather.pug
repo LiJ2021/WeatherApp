@@ -7,17 +7,17 @@ html(lang="en")
         title WeatherMan App
         link(rel="stylesheet", href="style.css")
     body 
-    h1 WeatherMan App 
-    p Enter a city to check the current weather conditions.
-    form(action = '/', method = 'POST')
-        div 
-            label(for="city") Enter City: 
-            input(name="city" value = "City")
-        br
-        button(type="submit") Submit Location
+        h1 WeatherMan App 
+        p Enter a city to check the current weather conditions.
+        form(action = '/weatherResults', method = 'POST')
+            div 
+                label(for = "city") Enter Location: 
+                input(type= "text" name = "city" value = "City" id="cityname") 
+            br
+            button(type="submit" onclick = getData()) Submit Location
 
-    script(src="index.js") 
 //-----------------------
+//- including id allows us to click on the name next to the text area to enter input
     //once the information is submitted, I want the request to return:
 
         div(id="image")
@@ -28,5 +28,5 @@ html(lang="en")
         //- weather conditions will appear here - under condition,text
 
 
-    script(src="script.js")
-    h1 Local Weather 
+
+    //how to incorporate media queries in pug?
