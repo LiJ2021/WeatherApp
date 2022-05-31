@@ -9,13 +9,12 @@ html(lang="en")
     body 
         h1 WeatherMan App 
         p Enter a city to check the current weather conditions.
-        form(action = '/weatherResults', method = 'POST')
-            div 
-                label(for = "city") Enter Location: 
-                input(type= "text" name = "city" value = "City" id="cityname") 
-            br
-            button(type="submit" onclick = getData()) Submit Location
-
+        #center 
+            label(for = "city") Enter Location: 
+            input(type= "text" name = "city" id="cityname" value="City") 
+        br
+        button(type="submit" onclick = "getData()") Submit Location
+        script(src="index.js") 
 //-----------------------
 //- including id allows us to click on the name next to the text area to enter input
     //once the information is submitted, I want the request to return:
@@ -28,5 +27,5 @@ html(lang="en")
         //- weather conditions will appear here - under condition,text
 
 
-
-    //how to incorporate media queries in pug?
+    //-line 12 should read form(action = '/weatherResults', method = 'POST')
+    //-how to incorporate media queries in pug?

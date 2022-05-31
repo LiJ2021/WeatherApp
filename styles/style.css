@@ -2,8 +2,21 @@ body {
     background-color: bisque;
 }
 
-/* img {} */
+#img {
+    height: 13px;
+    width: auto;
+}
 
-h1, p {
+h1, p, h3 {
     text-align: center;
 }
+
+button {
+    margin: 0 auto;
+    display: block;
+}
+#center, div {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }

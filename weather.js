@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-Parser')
 const app = express()
+//from node fetch imports page
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 app.set('views', './views')
 app.set('view engine', 'pug')
@@ -19,16 +21,72 @@ app.get('/', function(request, response){
 })
 
 
-// app.post('/', function(request, response){ 
-// //npm install body-parser - body parsing middleware
-// //npm install multer
-//     console.log(request.body)
-//     console.log(`Weather for: ${request.body.city}`)
-//     response.send(`Weather for: ${request.body.city}`)
-// })
 
-app.post('/weatherResults', function(request, response){
-    response.render('weatherResults', request.body)
+app.get('/weatherResults/:cityName', function(request, response){
+
+
+
+    let cityName = request.params.cityName
+    console.log(cityName)
+
+fetch(`http://api.weatherapi.com/v1/current.json?key=ab3a7ce8d72a4558982140337222605&q=${cityName}&aqi=no`)
+
+
+//put the information in a format that can be interpreted
+.then(response =>{
+    return response.json()
+})
+//return the selected data
+//identify the parts of the data that I want to use
+.then (data =>{
+
+    //what do I want to do?  Get the specific information that I want from the api
+
+    //data is the variable and retrieving the specific data
+    let condition = data.current.condition.text
+    let city = data.location.name
+    let state = data.location.region
+    let temperature = data.current.temp_f
+    let temperature_c = data.current.temp_c
+    let humidity = data.current.humidity
+
+    //how to retrieve an image in an object that is being returned by a web address?
+    //image is data.current.condition.icon
+    let image = data.current.condition.icon 
+    //- no error but no image
+    
+    
+    
+    //showing everything that the fetch retrieved in the console
+    console.log("data", data)
+
+    //showing specific components    
+    console.log("city", city)
+    console.log("state", state)
+    console.log("condition", condition)
+    console.log("temperature", temperature)
+    console.log("temperature_c", temperature_c)
+    console.log("humidity", humidity)
+    //can you console.log an image?
+
+    //group selected components
+    let result = {
+        city: city,
+        state: state,
+        condition: condition,
+        temperature: temperature,
+        temperature_c: temperature_c,
+        humidity: humidity
+    }
+    response.render('weatherResults', result)
+    //view the group of results that I want to see in the console
+    // console.log("result", result)
+
+  
 })
 
-app.listen(4111)
+
+
+})
+
+app.listen(1122)
