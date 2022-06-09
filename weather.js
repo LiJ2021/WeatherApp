@@ -76,8 +76,11 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=ab3a7ce8d72a455898214033722
         condition: condition,
         temperature: temperature,
         temperature_c: temperature_c,
-        humidity: humidity
+        humidity: humidity,
+        image: `http:${image}`
+
     }
+    console.log(result.image)
     response.render('weatherResults', result)
     //view the group of results that I want to see in the console
     // console.log("result", result)
