@@ -7,7 +7,7 @@ html(lang="en")
         title Weather Results
         link(rel="stylesheet", href="/style.css")
     body 
-        h1 WeatherMan App 
+        h1 WeatherLi App 
         h3 Today's weather for #{city}, #{state}:
         #image 
         img(src=image, alt="Weather Condition Icon" id="center")
@@ -17,6 +17,8 @@ html(lang="en")
         h3 Current temperature: #{temperature}(F), #{temperature_c}(C)
         #humidity 
         h3 Humidity: #{humidity}%
-        button(type="submit" onclick="history.back()") Search Again?
+        a(href="/")
+            button.button(type="reset") Search Again?
         
     
+//- alternate for button --> button(type="submit" onclick="history.back()") Search Again?
