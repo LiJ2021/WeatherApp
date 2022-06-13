@@ -52,3 +52,10 @@ response headers
         }
     }
 }
+
+
+NEXT to ADD - 
+how to error check?
+
+how to hide api key in it?
+git ignore to interpolate key

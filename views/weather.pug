@@ -9,8 +9,8 @@ html(lang="en")
     body 
         h1 WeatherMan App 
         p Enter a city to check the current weather conditions.
-        #center 
-            label(for = "city") Enter Location: 
+        div  
+            label(for = "city") Enter Location:       
             input(type= "text" name = "city" id="cityname" value="City") 
         br
         button(type="submit" onclick = "getData()") Submit Location
