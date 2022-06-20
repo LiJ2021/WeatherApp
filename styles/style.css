@@ -1,12 +1,11 @@
 body {
-    background-image: url('/images/levan-badzgaradze-L-g5FjUXI5M-unsplash.jpg');
-    background-color: bisque;
+    background-image: url('levan-badzgaradze-L-g5FjUXI5M-unsplash.jpg');
+    /* background-color: bisque; */
 }
 
-/* #img {
-    height: 13px;
-    width: auto;
-} */
+p, label {
+    font-size: larger;
+}
 
 h1, p, h3 {
     text-align: center;

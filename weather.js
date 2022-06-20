@@ -22,7 +22,6 @@ app.get('/', function(request, response){
 
 })
 
-
 app.get('/weatherResults/:cityName', function(request, response){
 
     let cityName = request.params.cityName
@@ -32,9 +31,6 @@ app.get('/weatherResults/:cityName', function(request, response){
 //passing retrieved data into API
 fetch(`http://api.weatherapi.com/v1/current.json?key=ab3a7ce8d72a4558982140337222605&q=${cityName}&aqi=no`)
 
-//Hiding API key 
-//fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${cityName}&aqi=no`) 
-//add api key to git ignore file
 
 //put the information in a format that can be interpreted
 .then(response =>{

@@ -8,6 +8,7 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
     body 
         h1 WeatherLi App 
+        br
         p Enter a city to check the current weather conditions.
         div  
             label(for = "city") Enter Location:       
@@ -15,7 +16,7 @@ html(lang="en")
         br
         button(type="submit" onclick = "getData()") Submit Location
         script(src="index.js") 
-//-----------------------
+//--------------------------------------------
 //- including id allows us to click on the name next to the text area to enter input
     //once the information is submitted, I want the request to return:
 
@@ -26,6 +27,4 @@ html(lang="en")
         div(id="condition")
         //- weather conditions will appear here - under condition,text
 
-
-    //-line 12 should read form(action = '/weatherResults', method = 'POST')
     //-how to incorporate media queries in pug?

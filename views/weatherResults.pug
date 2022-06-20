@@ -8,13 +8,14 @@ html(lang="en")
         link(rel="stylesheet", href="/style.css")
     body 
         h1 WeatherLi App 
+        br
         h3 Today's weather for #{city}, #{state}:
         #image 
         img(src=image, alt="Weather Condition Icon" id="center")
         #condition 
         h3 Weather Conditions: #{condition}
         #temperature_c 
-        h3 Current temperature: #{temperature}(F), #{temperature_c}(C)
+        h3 Current temperature: #{temperature} °F,  #{temperature_c} °C
         #humidity 
         h3 Humidity: #{humidity}%
         a(href="/")
