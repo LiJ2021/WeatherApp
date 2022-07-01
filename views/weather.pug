@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title WeatherMan App
+        title WeatherLi App
         link(rel="stylesheet", href="style.css")
     body 
         h1 WeatherLi App 
@@ -15,7 +15,8 @@ html(lang="en")
             input(type= "text" name = "city" id="cityname" value="City") 
         br
         button(type="submit" onclick = "getData()") Submit Location
-        script(src="index.js") 
+        script(src="index.js")
+        
 //--------------------------------------------
 //- including id allows us to click on the name next to the text area to enter input
     //once the information is submitted, I want the request to return:
@@ -28,3 +29,4 @@ html(lang="en")
         //- weather conditions will appear here - under condition,text
 
     //-how to incorporate media queries in pug?
+  //- line 19? script(src = "apiKey.js") 

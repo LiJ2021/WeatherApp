@@ -1,7 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-Parser')
 const app = express()
-
+const rateLimit = require('express-limiter');
+const { response } = require('express');
+const { request } = require('express');
+const res = require('express/lib/response');
 //from node fetch imports page
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
@@ -16,6 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static('images'))
 app.use(express.static('styles'))
 app.use(express.static('scripts'))
+
 
 app.get('/', function(request, response){
         response.render('weather')
@@ -92,5 +96,6 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=ab3a7ce8d72a455898214033722
 
 
 })
+
 
 app.listen(1122)
