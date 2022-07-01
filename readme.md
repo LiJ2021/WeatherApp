@@ -20,8 +20,8 @@ Applications/frameworks/libraries/middleware/utilities used - pug (HTML preproce
 fetch('http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city)
 
 For mentors to run the files I believe you have to install all middleware/applications/frameworks etc from your terminal with the following:
-
-npm install
+git
+npm init -y
 npm i express pug nodemon node body-parser node-fetch
 
 to run the application:
