@@ -17,7 +17,7 @@ This project will tell you the current weather conditions in different cities ar
 Applications/frameworks/libraries/middleware/utilities used - pug (HTML preprocessor/template engine), express, node, body-parser, node-fetch, nodemon
 
 *I wanted to implement a gitignore to hide my api key, but that would make it a little more difficult for other users to run the app, unless they got their own api key. 
-fetch('http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city)
+fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`)
 
 For mentors to run the files I believe you have to install all middleware/applications/frameworks etc from your terminal with the following:
 git
