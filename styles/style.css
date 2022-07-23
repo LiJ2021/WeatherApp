@@ -1,8 +1,20 @@
 body {
     background-image: url('levan-badzgaradze-L-g5FjUXI5M-unsplash.jpg');
     /* background-color: bisque; */
+    background-size: 130rem;
+    }
+@media (max-width: 600px){
+    body{
+    background-image: url('szabo-viktor-28ZbKOWiZfs-unsplash.jpg');
+    background-size: 38rem;
+        }
+    label, input {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 50%;
+        }
 }
-
 p, label {
     font-size: larger;
 }

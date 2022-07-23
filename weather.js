@@ -1,15 +1,27 @@
 const express = require('express')
 const bodyParser = require('body-Parser')
-const app = express()
-const rateLimit = require('express-limiter');
+const rateLimit = require('express-rate-limit');
 const { response } = require('express');
 const { request } = require('express');
 const res = require('express/lib/response');
+
+const app = express()
+
+const limiter = rateLimit({
+    //every 15 minutes I will allow 40 requests to the server
+    windowMS: 15 * 60 * 1000,
+    max: 40,
+    message: "Maximum requests reached in 15 minute time-frame"
+})
+
 //from node fetch imports page
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 app.set('views', './views')
 app.set('view engine', 'pug')
+
+//implement rate limiter for open key
+app.use(limiter)
 
 //parse JSON data
 app.use(bodyParser.json())

@@ -14,16 +14,16 @@ This project will tell you the current weather conditions in different cities ar
 
 ● Visual representation of retrieved data (images)
 
-Applications/frameworks/libraries/middleware/utilities used - pug (HTML preprocessor/template engine), express, node, body-parser, node-fetch, nodemon
+Applications/frameworks/libraries/middleware/utilities used - pug (HTML preprocessor/template engine), express, node, body-parser, node-fetch, nodemon, express-rate-limit
 
 *I wanted to implement a gitignore to hide my api key, but that would make it a little more difficult for other users to run the app, unless they got their own api key. 
 fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`)
 
-For mentors to run the files I believe you have to install all middleware/applications/frameworks etc from your terminal with the following:
+To run the files you have to install all middleware/applications/frameworks etc from your terminal with the following:
 git
 npm init -y
-npm i express pug nodemon node body-parser node-fetch
+npm i express pug nodemon node body-parser node-fetch express-rate-limit
 
 to run the application:
 
- I opened the weatherapp folder in VSCode, opened a terminal within thr program,  ran nodemon weather.js, and then, from the web browser, typed localhost: 1122. 
+ I opened the weatherapp folder in VSCode, opened a terminal within the program,  ran nodemon weather.js, and then, from the web browser, typed localhost: 1122. 
