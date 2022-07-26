@@ -9,6 +9,7 @@ This project will tell you the current weather conditions in different cities ar
 ● Retrieve data from an external API and display data in your app 
 
 ● Develop project using a common JS framework
+    I used Express as the backend JS framework
 
 ● Create a web server with at least one route and connect to it from your application using ExpressJS
 
@@ -16,10 +17,9 @@ This project will tell you the current weather conditions in different cities ar
 
 Applications/frameworks/libraries/middleware/utilities used - pug (HTML preprocessor/template engine), express, node, body-parser, node-fetch, nodemon, express-rate-limit
 
-*I wanted to implement a gitignore to hide my api key, but that would make it a little more difficult for other users to run the app, unless they got their own api key. 
+I wanted to implement a gitignore to hide my api key, but that would make it a little more difficult for other users to run the app, unless they got their own api key. 
 fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`)
-
-I installed a rate limiter to prevent massive requests in short time frames
+so I installed a rate limiter to prevent massive requests in short time frames
 
 To run the files you have to install all middleware/applications/frameworks etc from your terminal with the following:
 git
