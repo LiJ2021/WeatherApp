@@ -5,8 +5,6 @@ This project will tell you the current weather conditions in different cities ar
 
 ● I used the templating engine pug as an extra feature to play around with it and see how it compares to rendering a webpage in regular html. Pug was formerly known as Jade.
 
-● Read and parse an external file into your application and display some data from that in your app
-
 ● Retrieve data from an external API and display data in your app 
 
 ● Develop project using a common JS framework
