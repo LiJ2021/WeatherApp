@@ -43,6 +43,9 @@ app.get('/weatherResults/:cityName', function(request, response){
     let cityName = request.params.cityName
     //confirm retrieving city name from the input field
     console.log("cityName", cityName)
+    //analyze text and display information about it - how many letters in entered city?
+    let cityNamelength = cityName.length
+    console.log("cityNamelength", cityNamelength)
 
 //passing retrieved data into API
 fetch(`http://api.weatherapi.com/v1/current.json?key=ab3a7ce8d72a4558982140337222605&q=${cityName}&aqi=no`)
@@ -93,7 +96,9 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=ab3a7ce8d72a455898214033722
         temperature: temperature,
         temperature_c: temperature_c,
         humidity: humidity,
-        image: `http:${image}`
+        image: `http:${image}`,
+        cityNamelength
+
 
     }
     //is image file being properly brought in?
