@@ -24,11 +24,10 @@ I wanted to implement a gitignore to hide my api key, but that would make it a l
 fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`)
 so I installed a rate limiter to prevent massive requests in short time frames
 
-To run the files you have to install all middleware/applications/frameworks etc from your terminal with the following:
-git
-npm init -y
-npm i express pug nodemon node body-parser node-fetch express-rate-limit
+To run the files you have to install all middleware/applications/frameworks etc from your terminal with the following commands:
+1. npm install -y
+2. npm i express pug nodemon node body-parser node-fetch express-rate-limit
 
-to run the application:
+To run the application:
 
  I opened the weatherapp folder in VSCode, opened a terminal within the program,  ran nodemon weather.js, and then, in the web browser, typed localhost: 1122. 
